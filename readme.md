@@ -185,7 +185,7 @@ sys     0m1.539s
 Although you may certainly make arbitrary changes when debugging, your submission should not
 edit sgd_test.py except for the point marked "YOUR CODE HERE".
 
-A correct SGD implementation is worth 8 points, for a total of 56 points possible on this assignment.
+A correct SGD implementation is worth 8 points, for a total of 54 points possible on this assignment.
 
 
 
