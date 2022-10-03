@@ -409,7 +409,7 @@ class TestAutograd(unittest.TestCase):
         labels = [0, 3, 6]
 
         def reference_fn_label(label, args):
-            return np.sum(np.maximum(args[0] - args[0][label] + 1.0, 0.0))/len(args[0])
+            return (np.sum(np.maximum(args[0] - args[0][label] + 1.0, 0.0)) - 1.0)/len(args[0])
 
         reference_fns = [lambda args: reference_fn_label(label, args) for label in labels]
 
@@ -433,7 +433,7 @@ class TestAutograd(unittest.TestCase):
         scaleFactor = 10.0
 
         def reference_fn_label(label, args):
-            return np.sum(np.maximum(args[0] - args[0][label] + 1.0, 0.0))/len(args[0])
+            return (np.sum(np.maximum(args[0] - args[0][label] + 1.0, 0.0)) - 1.0)/len(args[0])
 
         reference_fns = [lambda args: scaleFactor * reference_fn_label(label, args) for label in labels]
 
